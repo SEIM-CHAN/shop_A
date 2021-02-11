@@ -1,0 +1,27 @@
+<?php session_start(); ?>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>購入画面</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+	<?php require 'menu.php'; ?>
+	<?php 
+	 if(isset($_SESSION['customer'])){
+		 echo "購入手続きを行うにはログインしてください";
+	 }else if(empty($_SESSION['product'])){
+		 echo "カートに商品がありません";
+	 }else {
+	?>
+	<p>お名前: <?= $_SESSION['customer']['name'] ?></p>
+	<p>ご住所: <?= $_SESSION['customer']['address'] ?></p>
+    
+</body>
+
+</html>
