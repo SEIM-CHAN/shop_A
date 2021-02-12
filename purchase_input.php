@@ -15,13 +15,21 @@
 	<?php 
 	 if(isset($_SESSION['customer'])){
 		 echo "購入手続きを行うにはログインしてください";
-	 }else if(empty($_SESSION['product'])){
+	 }else if(empty($_SESSION['product'])){//買い物かごが空の場合
 		 echo "カートに商品がありません";
-	 }else {
+	 }else { //正常処理
 	?>
+
 	<p>お名前: <?= $_SESSION['customer']['name'] ?></p>
 	<p>ご住所: <?= $_SESSION['customer']['address'] ?></p>
-    
+	<hr>
+	<?php require 'cart.php'; ?>
+	<hr>
+	<p>内容をご確認いただき、購入を確定してください。</p>
+	<a href="purchase_output.php">購入を確定する</a>
+    <?php 
+	 }
+	?>
 </body>
 
 </html>

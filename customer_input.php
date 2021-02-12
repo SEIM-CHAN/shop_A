@@ -20,7 +20,7 @@
 		</tr>
 		<tr>
 			<th><label for="address">住所：</label></th>
-			<td><input type="text" name+"address" value=""></td>
+			<td><input type="text" name="address" value=""></td>
 		</tr>
 		<tr>
 			<th><label for="login">ログイン名：</label></th>
@@ -28,10 +28,10 @@
 		</tr>
 		<tr>
 			<th><label for="password">パスワード：</label></th>
-			<td><input type="text" name="login" value=""></td>
+			<td><input type="text" name="password" value=""></td>
 		</tr>
 		<tr>
-           <th><input type="submit" name="name" value="登録"></th>
+           <th><input type="submit" value="登録"></th>
 		</tr>
 	</table>
     </form>
